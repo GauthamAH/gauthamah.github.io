@@ -1,0 +1,176 @@
+body {
+  background: linear-gradient(-45deg, #000000, #0d0d0d, #1a1a1a,silver);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  color: white;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+section {
+  scroll-margin-top: 120px; /* adjust to your navbar height */
+}
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  transition: 0.3s;
+}
+
+
+
+.nav-container {
+  display: flex;
+  justify-content: center;  /* Centers the box horizontally */
+  margin-top: 40px;
+}
+
+.glow-nav {
+  background: #111;
+  border: 1px solid #ff8800;
+  box-shadow: 0 0 15px #ff8800;
+  border-radius: 12px;
+  padding: 15px 60px; /* increased from 40px */
+  transition: 0.3s;
+  text-align: center;
+
+  /* Fixed top navbar */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  white-space: nowrap; /* 👈 this keeps all links in one line */
+}
+h1 {
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #cc5500;
+  transition: width 0.3s ease-in-out;
+}
+
+h1:hover::after {
+  width: 100%;
+}
+.glow-nav:hover {
+  box-shadow: 0 0 25px #ffaa33;
+}
+h1 {
+  background: linear-gradient(45deg, #ff8800, #ffaa33, #ff5500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+h1:hover {
+  transform: translateY(-5px);
+  color: #ff8800;
+  transition: 0.3s;
+}
+.typing {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #CC5500;
+  border-right: 3px solid #ff8800;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20ch; /* adjust to number of characters */
+  animation: typing 2.5s steps(20), blink 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 20ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+nav a {
+  color: #CC5500;
+  text-decoration: none;
+  font-size: 22px;
+  margin: 0 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.heading{
+  margin-left:100px;
+  margin-top:200px;
+  color:#CC5500;
+}
+p{
+  color:white;
+}
+.section {
+  position: relative;
+  background-image: url('your-bg-url.svg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* or black if background is light */
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+}
+.resume{
+  margin-left:-4px;
+  margin-top:10px;
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:8px;
+  color:#E4E2DD;
+  border:1px solid white;
+  background-color:darkorange;
+  text-decoration:none;
+  border-radius:18px;
+  transition:0.9s;
+}
+.resume:hover{
+  background-color:white;
+  color:#CC5500;
+  border:1px solid darkorange;
+  transition:0.4s;
+}
+.glow-nav {
+  background: #111;
+  color: #ff8800;
+  border: 1px solid #ff8800;
+  box-shadow: 0 0 10px #ff8800;
+  transition: 0.3s;
+  
+}
+
+.glow-nav:hover {
+  box-shadow: 0 0 20px #ffaa33;
+}
+a:hover {
+  color: #ffaa33;
+  text-decoration: underline;
+}
